@@ -1,0 +1,32 @@
+
+<!-- saved from url=(0116)https://ibank.standardchartered.co.in/adHelper.html?height=75&cacheb=0.053517671507316344&frameName=pre-didyouknow11 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body onload="parentIframeResize()">  
+    <script>  
+       function parentIframeResize() 
+      { 
+         var f_height = getParam('height'); 
+		 var f_width = getParam('width');
+	     var frameName = getParam('frameName');	
+		 if( f_width <= 0 || f_width == '' || f_width == null){
+			parent.parent.resizeIframe(f_height,frameName);     
+		 }
+		 else
+			parent.parent.resizeAdIframe(f_height,f_width,frameName);     
+            
+      } 
+       function getParam( name ) 
+      { 
+        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]"); 
+        var regexS = "[\\?&]"+name+"=([^&#]*)"; 
+        var regex = new RegExp( regexS ); 
+        var results = regex.exec( window.location.href ); 
+        if( results == null ) 
+          return ""; 
+        else 
+          return results[1]; 
+      } 
+    </script>  
+    
+ 
+
+</body></html>

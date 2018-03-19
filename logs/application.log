@@ -1,0 +1,11 @@
+2018-03-19 12:30:59,423 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Starting application at 2018-03-19T07:00:59.423Z
+2018-03-19 12:30:59,697 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-03-19 12:30:59,884 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
+2018-03-19 12:34:51,779 [INFO] from application in application-akka.actor.default-dispatcher-36 - ApplicationTimer demo: Stopping application at 2018-03-19T07:04:51.779Z after 232s.
+2018-03-19 12:34:52,088 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-5 - ApplicationTimer demo: Starting application at 2018-03-19T07:04:52.088Z
+2018-03-19 12:34:52,302 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-5 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-03-19 12:34:52,326 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-5 - Application started (Dev)
