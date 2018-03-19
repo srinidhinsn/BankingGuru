@@ -1,3 +1,5 @@
+Create a new play project with jdk8 and copy app, public, config etc folders to the newly created project replacing existing ones.
+
 [<img src="https://img.shields.io/travis/playframework/play-java-starter-example.svg"/>](https://travis-ci.org/playframework/play-java-starter-example)
 
 # play-java-starter-example
