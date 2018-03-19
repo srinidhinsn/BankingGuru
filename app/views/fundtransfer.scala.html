@@ -1,0 +1,62 @@
+@import vo._
+@(customer : Customer, tdl : List[TransactionDetails])
+
+<div ><h4>Third Party Fund Transfer</h4></div>
+<div style="color: red">@customer.getErrorMessage()</div>
+<form name="fundtransferAction" method="post"
+      action="/bank/@customer.getBankname()/customer/@customer.getAccountNo()/@customer.getIfsccode()/fundtransferAction">
+<table border="0" >
+    <tr>
+        <td width="30%">
+            From
+        </td>
+        <td width="70%">
+            <input type="text" name="from" value="@customer.getFirstName() @customer.getLastName()-@customer.getAccountNo()"
+                   readonly="true" />
+        </td>
+    </tr>
+        <td>
+            Method
+        </td>
+        <td>
+            <input type="radio" name="method" value="NEFT" checked> NEFT &nbsp;&nbsp;
+            <input type="radio" name="method" value="RTGS"> RTGS &nbsp;&nbsp;
+            <input type="radio" name="method" value="IMPS"> IMPS
+            <input type="hidden" name="customerIfsccode" readonly="true"
+                   value="@customer.getIfsccode()" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Payee Account number
+        </td>
+        <td>
+            <input type="text" name="account" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Payee IFSC Code
+        </td>
+        <td>
+            <input type="text" name="payeeIfsccode" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Amount
+        </td>
+        <td>
+            <input type="text" name="amount" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            <input type="submit" name="Submit" />
+        </td>
+    </tr>
+</table>
+
+</form>

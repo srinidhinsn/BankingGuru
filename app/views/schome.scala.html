@@ -1,0 +1,219 @@
+@import vo._
+@(customer : Customer, td : List[TransactionDetails] )
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "/WEB/INF/xhtml1-strict.dtd">
+<!-- saved from url=(0051)https://ibank.standardchartered.co.in/nfs/login.htm -->
+<html style="display: block;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" async="" src="@routes.Assets.versioned("Standard Chartered Online Banking_files/analytics.js.download")"></script>
+    <script async="" src="@routes.Assets.versioned("Standard Chartered Online Banking_files/gtm.js.download")"></script>
+    <script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'INR101';
+appIdMap.notAllCards = 'INR99';
+appIdMap.allCards = 'INR98';
+appIdMap.loanOnCards = 'INR100';
+appIdMap.supplementaryCard = 'INR97';
+
+
+
+    </script>
+    <meta http-equiv="CACHE-CONTROL" content="NO-STORE">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="EXPIRES" content="-1">
+    <title> Standard Chartered Online Banking </title>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("Standard Chartered Online Banking_files/style.css")" media="all">
+    <script type="text/javascript">
+	   var isSme = false;
+
+    </script>
+    <script type="text/javascript" src="@routes.Assets.versioned("Standard Chartered Online Banking_files/script.js.download")"> </script>
+     <!-- begin: Cy Site Seal Code --> <script type="text/javascript" src="@routes.Assets.versioned("Standard Chartered Online Banking_files/siteseal.js.download")"> </script>
+    <!-- end: Cy Site Seal Code -->
+    <script type="text/javascript">
+    	var requestId = '11CDCE2C-E3BE-3E82-C9C4-2E733A6B8DF7';
+
+    </script>
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr>
+            <td align="left">
+                <table class="tbl_layout" cellpadding="0" cellspacing="0">
+                    <colgroup>
+                        <col width="1%">
+                        <col width="98%">
+                        <col width="1%">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <td rowspan="3">&nbsp;</td>
+                        <td>
+                            <table cellpadding="0" cellspacing="0">
+                                <colgroup>
+                                    <col width="20%" class="scb_colorbar1">
+                                    <col width="10%" class="scb_colorbar2">
+                                    <col width="15%" class="scb_colorbar3">
+                                    <col width="5%" class="scb_colorbar4">
+                                    <col width="50%" class="scb_colorbar5">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <table class="tbl_heading" cellpadding="0" cellspacing="0">
+                                <colgroup>
+                                    <col width="17%">
+                                    <col width="83%">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <td rowspan="2"><img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/logo.gif")">
+                                    </td>
+                                    <td class="txt_mainheading">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_subheading"> India</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <hr class="hr_heading">
+                        </td>
+                        <td rowspan="3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td colspan="3" style="color: green"><h2>Personal banking</h2></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="grey" colspan="3" style="color: green"></td>
+                                </tr>
+                                <tr>
+                                    <td width="20%">
+                                        @if(!"viewtransactionchart".equalsIgnoreCase(customer.getPage())){
+                                            @sidenav(customer)
+                                        }
+                                    </td>
+                                <td width="80%">
+                                    @if("viewtransactionchart".equalsIgnoreCase(customer.getPage())){
+                                        @transactionchart(customer, td)
+                                    } else if("fundtransfer".equalsIgnoreCase(customer.getPage())){
+                                        @fundtransfer(customer, td)
+                                    } else if ("lasttransactions".equalsIgnoreCase(customer.getPage())){
+                                        @transactions(customer, td)
+                                    } else if (null != customer.getErrorMessage() && !customer.getErrorMessage().isEmpty()) {
+                                        @fundtransfer(customer, td)
+                                    } else if ("adhar".equalsIgnoreCase(customer.getPage())){
+                                        @adhar(customer, td)
+                                    } else {
+                                        @summary(customer, td)
+                                    }
+                                </td>
+                                <td width="0%"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.standardchartered.com/public_website/india/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'INR101';
+appIdMap.notAllCards = 'INR99';
+appIdMap.allCards = 'INR98';
+appIdMap.loanOnCards = 'INR100';
+appIdMap.supplementaryCard = 'INR97';
+
+
+
+                            </script>
+                            <br> <br> <br> <br>
+                            <hr class="hr_heading">
+                            <br>
+                            <script type="text/javascript">
+	var dataLayer = [];
+
+                            </script>
+                            <script>
+(
+		function(w,d,s,l,i){
+			w[l]=w[l]||[];
+			w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+			var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+			j.async=true;
+			j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+			f.parentNode.insertBefore(j,f);
+})
+(window,document,'script','dataLayer','GTM-NK6NQ3Z');
+
+                            </script>
+                            Copyright © 2006-2014 Standard Chartered Bank
+                            &nbsp;<span class="txt_seperator">|</span>&nbsp;
+                            <img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/arrow_blue_single_tab.gif")">
+                            <a href="http://www.standardchartered.co.in/_documents/tnc/electronicbankingterms.htm"
+                               class="navcontainer_nav_1" id="nav_terms_conditions" target="new_window"> Terms &amp;
+                                Conditions </a>
+                            &nbsp;<span class="txt_seperator">|</span>&nbsp;
+                            <img src="@routes.Assets.versioned("Standard Chartered Online Banking_files/arrow_blue_single_tab.gif")">
+                            <a href="http://www.standardchartered.co.in/_documents/tnc/datapp.html" target="new_window">
+                                Data Protection and Privacy Policy </a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="hidden" name="t" value="2-0-080AF6EB37AA817A7C340B6335CB1BCF">
+</body>
+</html>

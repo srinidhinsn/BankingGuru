@@ -1,0 +1,96 @@
+@import vo._
+@(customer : Customer, tdl : List[TransactionDetails])
+
+
+<script src="@routes.Assets.versioned("Contents/jquery-1.9.1.js")"></script>
+<script src="@routes.Assets.versioned("Contents/jquery-1.11.1.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/FileSaver/FileSaver.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/html2canvas/html2canvas.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/jsPDF/jspdf.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js")"></script>
+
+<script src="@routes.Assets.versioned("Contents/jquery.canvasjs.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/pdfmake/pdfmake.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/pdfmake/vfs_fonts.js")"></script>
+
+<script src="@routes.Assets.versioned("Contents/export/libs/FileSaver/tableExport.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/tableExport.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/tableExport.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/jquery.base64.js")"></script>
+
+
+<!--<script src="@routes.Assets.versioned("Contents/export/jquery-latest.min.js")"></script>-->
+
+
+<div ><h4>Transaction Chart</h4></div>
+
+<script>
+window.onload = function () {
+
+var options = {
+	animationEnabled: true,
+	title: {
+		text: "Credit Chart"
+	},
+	axisY: {
+		title: "Transaction rate (Rs)",
+		suffix: "Rs",
+		includeZero: false
+	},
+	axisX: {
+		title: "Date"
+	},
+	data: [{
+		type: "column",
+		yValueFormatString: "#,##0.0#"%"",
+		dataPoints: [
+
+@for(td <- tdl){
+@defining(td) { td =>
+
+		    { label: "@td.getType()", y: @td.getAmount()},
+}}
+		]
+	}]
+};
+
+
+
+var options2 = {
+	animationEnabled: true,
+	title: {
+		text: "Debit Chart"
+	},
+	axisY: {
+		title: "Transaction rate (Rs)",
+		suffix: "Rs",
+		includeZero: false
+	},
+	axisX: {
+		title: "Date"
+	},
+	data: [{
+		type: "column",
+		yValueFormatString: "#,##0.0#"%"",
+		dataPoints: [
+
+@for(td <- tdl){
+@defining(td) { td =>
+    @if(null != td.getMaterial() && !td.getMaterial().isEmpty()){
+		    { label: "@td.getMaterial()", y: @td.getBalance()},
+		    }
+}}
+		]
+	}]
+};
+$("#debitChart").CanvasJSChart(options2);
+$("#creditChart").CanvasJSChart(options);
+}
+</script>
+
+<div id="creditChart" style="height: 370px; width: 100%;"></div>
+
+<div id="debitChart" style="height: 370px; width: 100%;"></div>
+<a href="javascript:history.back()">Go Back</a> |
+<a href="/bank/@customer.getBankname()/customer/@customer.getAccountNo()/@customer.getIfsccode()/lasttransactions">View last 10 transactions</a>
+

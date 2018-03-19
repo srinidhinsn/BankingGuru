@@ -1,0 +1,13 @@
+@import vo._
+@(customer : Customer)
+<h4 style="font-weight: bold">Navigation</h4>
+<div><a href="/bank/@customer.getBankname()/customer/@customer.getAccountNo()/@customer.getIfsccode()/lasttransactions">View last 10 transactions</a> </div>
+<div><a href="/bank/@customer.getBankname()/customer/@customer.getAccountNo()/@customer.getIfsccode()/viewtransactionchart">View transaction chart</a> </div>
+<div><a href="/bank/@customer.getBankname()/customer/@customer.getAccountNo()/@customer.getIfsccode()/fundtransfer">Fund transfer</a> </div>
+Adhar Number<br />
+<div><a href="/bank/@customer.getBankname()/customer/@customer.getAccountNo()/@customer.getIfsccode()/adhar">@customer.getAdharno()</a> </div>
+
+<br /><br />
+<div><a href="#">Mutual funds</a> </div>
+<div><a href="#">Loans</a> </div>
+<div><a href="#">Customer services</a> </div>

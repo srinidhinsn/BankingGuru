@@ -1,0 +1,447 @@
+@import vo._
+@(customer : Customer, td : List[TransactionDetails] )
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://retail.onlinesbi.com/retail/login.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> State Bank of India - Personal Banking</title>
+
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="EXPIRES" content="0">
+    <!--  Javascript Declaration   -->
+
+
+    <meta name="format-detection" content="telephone=yes">
+
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://retail.onlinesbi.com/sbijava/retail/images/favicon.ico" type="image/x-icon">
+
+    <!-- <link rel="stylesheet" href="/sbijava/retail/css/style.css" type="text/css" /> -->
+    <link rel="stylesheet" href="@routes.Assets.versioned("State Bank of India - Personal Banking_files/bootstrap.css")" type="text/css">
+
+    <link rel="stylesheet" href="@routes.Assets.versioned("State Bank of India - Personal Banking_files/phishing_login.css")" type="text/css">
+    <script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/jquery-1.11.3.min.js.download")"></script>
+<script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/bootstrap.js.download")"></script>
+    <script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/common_virtual.js.download")"></script>
+<script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/virtualkb_login.js.download")"></script>
+    <script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/jquery.vticker.min.js.download")"></script>
+
+
+<script language="javascript1.2" type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/loginTrouble_5034_security.js.download")"></script>
+    <script language="javascript1.2" type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/md5_5034.js.download")"></script>
+<script language="javascript1.2" type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/sha512.js.download")"></script>
+    <script language="javascript1.2" type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/profile_sha.js.download")"></script>
+<script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/common.js.download")"></script>
+    <script language="javascript1.2" type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/profile_sha_gc3.js.download")"></script>
+
+
+<script language="JavaScript">
+window.history.forward(0);
+</script>
+    <script>
+$(document).ready(function() {
+
+	$(".login_button").click(function(){
+        $("#login_block").show();
+		$("#phishing_block").hide();
+		window.parent.scrollTo(0,0);
+    });
+
+	$("div").delegate(".arrow", "click", function(e){
+		/*header open close - mobile*/
+			e.stopPropagation();
+			$("#header_navigation").slideToggle("swing");
+			if($(this).hasClass('arrow_up') ) {
+				$(this).removeClass('arrow_up').addClass('arrow_down');
+			} else {
+				$(this).removeClass('arrow_down').addClass('arrow_up');
+			}
+	    });
+
+	$('#reset_btn').click(function(){
+		document.getElementById("chkbox").checked = false;
+	});
+
+	/* Move To Top */
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$("#scrollup").fadeIn()
+			} else {
+				$("#scrollup").fadeOut()
+			}
+		});
+		$("#scrollup").click(function () {
+			$("body,html").animate({
+				scrollTop: 0
+			}, 800);
+			return false
+		});
+	});
+
+	$('#netbanking_branches a').click(function(){
+		if($('#netbanking_popup').is(':hidden')) {
+			$('#netbanking_popup').slideDown(400);
+			$('#header').animate({'marginTop':'138px'});
+			$(this).addClass('netbanking_button_up');
+		}else{
+			$('#netbanking_popup').slideUp(400);
+			$('#header').animate({'marginTop':'0px'});
+			$(this).removeClass('netbanking_button_up');
+		}
+	});
+
+});
+</script>
+</head>
+
+<body>
+<div id="shadow">
+    <div id="wrapper" class="container">
+
+        <title>State Bank of India</title>
+
+        <div class="row" id="header">
+            <header id="headerContent">
+                <!-- Logo -->
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <img src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/sbi-logo.png")" alt="VeriSign">
+                </div>
+                <div id="header_core_info">
+                    <div class="col-lg-9 col-md-9 col-sm-9">
+                        <div class="pull-right">
+                            <!-- 					<a href="javascript:void(0);" id="osbi_logo" class="hidden-xs">&nbsp;</a> -->
+                            <div id="header_navigation">
+
+                                <ul id="forms" class="pull-right">
+
+                                    <li style="align:left">
+
+
+                                    </li>
+                                    <li class="about">
+                                        <a href="https://retail.onlinesbi.com/sbijava/retail/html/aboutus.html" target="_blank" accesskey="3" title="Press Alt + 3 and Enter"> About
+                                            OnlineSBI </a>
+
+                                    </li>
+
+
+                                    <!--   Modified By	:	Priya   Date			:	03/02/2015   For			:	SBP Hindi Starts-->
+
+
+                                    <li>
+                                        <a href="https://retail.onlinesbi.com/personal/reg_forms.html" target="_blank" title="Forms">Forms</a>
+
+                                    </li>
+                                    <!--   Modified By	:	Priya   Date			:	03/02/2015   For			:	SBP Hindi Ends-->
+                                    <li>
+                                        <a href="javascript:void(0);" class="last" onclick="openpopup();">Net Banking Branches</a>
+
+                                    </li>
+                                </ul>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Modal box -->
+
+            </header>
+        </div>
+        <!-- Header core info Ends-->
+
+        <!-- Header Main Navigation-->
+
+        <div class="row" id="primary_navigation">
+            <nav role="navigation" class="navbar navbar-default" id="navContent">
+                <div class="navbar-header">
+                    <button id="ChangeToggle" type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle collapsed">
+                        <div id="navbar-hamburger">
+                            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                        </div>
+                        <div id="navbar-close" class="hidden">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </div>
+                    </button>
+                    <div class="arrow_icon pull-right hidden-lg hidden-md hidden-sm">
+                        <a href="javascript:void(0);" class="arrow arrow_up">&nbsp;</a>
+                    </div>
+                </div>
+                <div id="navbarCollapse" class="collapse navbar-collapse nav-comn">
+                    <ul class="nav navbar-nav" id="navigation">
+
+
+                        <li class="active_menu"><a href="https://retail.onlinesbi.com/">Home</a>
+                        </li>
+
+
+
+
+
+                        <!--Added for Productions and services post login updation-->
+                        <!--<td width="158" class="topNavTextNormal"><a href="#" onclick="window.open('/sbijava/productsandservices.html','productservice','width=780, height=500, status=1, scrollbars=1, location=0')">Products &amp; Services</a></td>-->
+                        <li><a href="https://retail.onlinesbi.com/retail/login.htm#" onclick="window.open(&#39;/personal/productandservices.html&#39;,&#39;productservice&#39;,&#39;width=780, height=500, status=1, scrollbars=1, location=0&#39;)">Products
+                            &amp; Services</a></li>
+                        <!--Added for Productions and services post login updation-->
+
+
+
+                        <!-- <li><a onclick="javascript:window.open('/personal/sbijava/howdoi/prelogin/retail_hdi_sbi_base_prelogin.html','howdoi','width=790, height=540, status=0, scrollbars=0, location=0')"
+                href="#">How Do I</a></li> -->
+                        <li><a href="https://retail.onlinesbi.com/personal/rinb_videos.html" target="_blank">How Do I</a></li>
+
+
+
+                    </ul>
+                </div>
+
+                <!-- Header Main Navigation Ends-->
+            </nav>
+        </div>
+
+
+        <!-- Added for CR-2424, To disable right click option for the entire site -->
+
+        <!--header ends here     -->
+
+
+
+
+
+
+        <!--Added for hindi Translation -->
+
+
+
+
+        <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+
+        <!-- CR 2614 changes end -->
+
+        <style>
+a.tooltip {
+	outline: none;
+}
+
+a.tooltip strong {
+	line-height: 30px;
+}
+
+a.tooltip:hover {
+	text-decoration: none;
+}
+
+a.tooltip span {
+	z-index: 10;
+	display: none;
+	padding: 14px 20px;
+	margin-top: -30px;
+	margin-left: 28px;
+	width: 300px;
+	line-height: 16px;
+}
+
+a.tooltip:hover span {
+	display: inline;
+	position: absolute;
+	color: #111;
+	border: 1px solid #DCA;
+	background: #fffAF0;
+}
+
+.callout {
+	z-index: 20;
+	position: absolute;
+	top: 30px;
+	border: 0;
+	left: -12px;
+}
+
+/*CSS3 extras*/
+a.tooltip span {
+	border-radius: 4px;
+	box-shadow: 3px 3px 5px #CCC;
+}
+</style>
+
+
+
+
+            <div>
+
+                <div class="row">
+                    <!-- Added for KiosK - CR 2914  -->
+
+
+
+                    <div class="login_heading">
+                        <div>
+                            <h3>
+                                Welcome to Personal Internet Banking
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 forgot_details">
+
+                                <table width="800px">
+                                    <tr>
+                                        <td colspan="3" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td bgcolor="grey" colspan="3" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">
+                                            @if(!"viewtransactionchart".equalsIgnoreCase(customer.getPage())){
+                                            @sidenav(customer)
+                                            }
+                                        </td>
+                                        <td width="70%">
+                                            @if("viewtransactionchart".equalsIgnoreCase(customer.getPage())){
+                                            @transactionchart(customer, td)
+                                            } else if("fundtransfer".equalsIgnoreCase(customer.getPage())){
+                                            @fundtransfer(customer, td)
+                                            } else if ("lasttransactions".equalsIgnoreCase(customer.getPage())){
+                                            @transactions(customer, td)
+                                            } else if (null != customer.getErrorMessage() && !customer.getErrorMessage().isEmpty()) {
+                                            @fundtransfer(customer, td)
+                                            } else if ("adhar".equalsIgnoreCase(customer.getPage())){
+                                            @adhar(customer, td)
+                                            } else {
+                                            @summary(customer, td)
+                                            }
+                                        </td>
+                                        <td width="0%"></td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+                        <!-- </div>    -->
+                        <!-- Login detail left Ends here  -->
+
+                </div>
+
+
+
+
+                <div class="row" id="provide_list">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <ul class="provide">
+
+
+                            <li>Mandatory fields are marked with an asterisk (*)
+                            </li>
+                            <li>Do not provide your username and password anywhere other than in this page
+                            </li>
+                            <li>Your username and password are highly confidential.Never part with them.<strong>SBI</strong> will never ask for this information.
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+        <!-- <div id="loading">
+                            <table border=0 align=center cellPadding=6 cellSpacing=0>
+                                <tr>
+                                    <td height="190"><img src="/sbijava/images/app_loading.gif">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div> -->
+
+        <!-- login content Ends here-->
+
+
+        <!-- Wrapper Ends -->
+
+        <div class="row" id="footer">
+            <!-- <footer id="footerContent"> -->
+
+            <div id="footer_area">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <img src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/veriSign_logo.png")" alt="VeriSign">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    <ul id="footer_links" class="pull-right hidden-xs">
+
+
+                        <li><a href="https://retail.onlinesbi.com/sbijava/retail/html/Privacy_Statement.html" target="_blank">Privacy Statement</a>
+                        </li>
+                        <li><a href="https://retail.onlinesbi.com/sbijava/retail/html/hmpg_disclosure.html" target="_blank">Disclosure</a>
+                        </li>
+                        <li><a href="https://retail.onlinesbi.com/sbijava/retail/html/Terms_of_Use.html" target="_blank">Terms of Service (Terms &amp; Conditions)</a>
+                        </li>
+
+
+
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-xs-12" id="best_view">
+
+
+                <div class="pull-left">
+                    <p>© State Bank of India</p>
+                </div>
+                <div class="pull-right hidden-xs">
+                    <p>Site best viewed at 1024 x 768 resolution in I.E 10 +,
+                        Mozilla 35 +, Google Chrome 35 +</p>
+                </div>
+
+
+            </div>
+            <div title="Move To Top" id="scrollup" style="display: block;"></div>
+        </div>
+
+        <!-- Modal box -->
+        <div id="myModal" class="modal fade net_branch" role="dialog">
+            <div class="modal-dialog" style="width:60%;">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="col-md-3 hidden-xs">
+                            <img src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/netbanking_img.png")" alt="Netbanking Branches">
+                        </div>
+                        <div class="col-md-9" style="padding-left:45px;">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h4 class="pull-left">Netbanking Branches</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p style="margin:0px;">All branches of State Bank of India are Internet Banking enabled. If you already have an account with us, ask your branch to give you Internet Banking. If you don't have an account, just step into any of our branches and open an account with Internet Banking facility. Internet Banking facility is available free of cost. Location of our branches can be known by visiting <a href="https://www.sbi.co.in/">www.sbi.co.in</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal box -->
+
+    </div>
+</div>
+
+
+</body></html>

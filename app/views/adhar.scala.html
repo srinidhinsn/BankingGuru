@@ -1,0 +1,46 @@
+@import vo._
+@(customer : Customer, tdl : List[TransactionDetails])
+
+
+<div><h4>Adhar Linked Accounts</h4></div>
+
+<table id="activity" border="1">
+<thead>
+    <tr bgcolor="grey"  style="font-weight:bold">
+        <th width="35%">
+            Account Number
+        </th>
+        <th width="30%">
+            Bank Name
+        </th>
+        <th width="20%">
+            Branch
+        </th>
+        <th width="15%">
+            IFSC Code
+        </th>
+    </tr>
+
+
+    @for(td <- tdl){
+    @defining(td) { td =>
+
+    <tr>
+        <td>
+            @td.getAccountNo()
+        </td>
+        <td>
+            @td.getFrom()
+        </td>
+        <td>
+            @td.getType()
+        </td>
+        <td>
+            @td.getIfsccode()
+        </td>
+    </tr>
+
+    }
+    }
+</thead>
+</table>

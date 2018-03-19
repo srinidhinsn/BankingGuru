@@ -1,0 +1,87 @@
+@import vo._
+@(customer : Customer, tdl : List[TransactionDetails])
+
+@summary(customer, tdl)
+
+<script src="@routes.Assets.versioned("Contents/jquery-1.9.1.js")"></script>
+<script src="@routes.Assets.versioned("Contents/jquery-1.11.1.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/FileSaver/FileSaver.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/html2canvas/html2canvas.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/jsPDF/jspdf.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js")"></script>
+
+<script src="@routes.Assets.versioned("Contents/jquery.canvasjs.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/pdfmake/pdfmake.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/libs/pdfmake/vfs_fonts.js")"></script>
+
+<script src="@routes.Assets.versioned("Contents/export/libs/FileSaver/tableExport.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/tableExport.js")"></script>
+<script src="@routes.Assets.versioned("Contents/export/tableExport.min.js")"></script>
+<script src="@routes.Assets.versioned("Contents/jquery.base64.js")"></script>
+
+
+<!--<script src="@routes.Assets.versioned("Contents/export/jquery-latest.min.js")"></script>-->
+
+
+<div><h4>Transaction Details</h4></div>
+
+<table id="activity" border="1">
+<thead>
+    <tr bgcolor="grey"  style="font-weight:bold">
+        <th width="20%">
+            Transaction Date
+        </th>
+        <th width="25%">
+            From/To
+        </th>
+        <th width="15%">
+            Method
+        </th>
+        <th width="10%">
+            Type
+        </th>
+        <th width="15%">
+            Amount
+        </th>
+        <th width="15%">
+            Balance
+        </th>
+    </tr>
+
+
+    @for(td <- tdl){
+    @defining(td) { td =>
+
+    <tr>
+        <td>
+            @td.getDateTime()
+        </td>
+        <td>
+            @td.getFrom()
+        </td>
+        <td>
+            @td.getMaterial()
+        </td>
+        <td>
+            @td.getType()
+        </td>
+        <td>
+            @td.getAmount()
+        </td>
+        <td>
+            @td.getBalance()
+        </td>
+    </tr>
+
+    }
+    }
+</thead>
+</table>
+
+
+
+<a href="#" onClick ="$('#activity').tableExport({type: 'csv', escape: 'false'});">CSV</a> |
+<a href="#" onClick ="$('#activity').tableExport({type: 'txt', escape: 'false'});">TXT</a> |
+<a href="#" onClick ="$('#activity').tableExport({type: 'excel', escape: 'false'});">XLS</a> |
+<a href="#" onClick ="$('#activity').tableExport({type: 'doc', escape: 'false'});">Word</a> |
+<a href="#" onClick ="$('#activity').tableExport({type:'pdf',pdfmake:{enabled:true}});">PDF</a>

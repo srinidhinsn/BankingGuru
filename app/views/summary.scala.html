@@ -1,0 +1,30 @@
+@import vo._
+@(customer : Customer, td : List[TransactionDetails])
+
+<div style="color: green"><h4>Account Summary</h4></div>
+<div style="color: green"><b>@customer.getSuccessMessage()</b></div>
+<table border="1" width="600px">
+    <tr bgcolor="grey"  style="font-weight:bold">
+        <td width="40%">
+            Account Holder
+        </td>
+        <td width="40%">
+            Account Number
+        </td>
+        <td width="20%">
+            Balance
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @customer.getFirstName() @customer.getLastName()
+        </td>
+        <td>
+            @customer.getAccountNo()
+        </td>
+        <td>
+            @td.get(0).getBalance()
+        </td>
+    </tr>
+
+</table>

